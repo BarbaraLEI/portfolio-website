@@ -52,7 +52,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ lang }) => {
         parts: [{ text: msg.text }]
       }));
 
-      const response = await fetch('/api/chat', {
+      // Updated to point to the standard Netlify Function path
+      const response = await fetch('/.netlify/functions/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
