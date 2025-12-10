@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import MouseFollower from './components/MouseFollower';
+import ChatWidget from './components/ChatWidget';
 import { getContent } from './constants';
 import { Language, View } from './types';
 
@@ -54,6 +55,9 @@ const App: React.FC = () => {
       <main className="md:ml-72 min-h-screen transition-all duration-300 relative z-10">
         {renderView()}
       </main>
+
+      {/* AI Chat Widget */}
+      <ChatWidget lang={lang} />
     </div>
   );
 };
